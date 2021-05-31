@@ -1,5 +1,5 @@
 # destination-08
-
+# This is Suzanne DePoe's final project for VUE CLI
 ## Project setup
 ```
 npm install
