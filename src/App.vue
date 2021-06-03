@@ -1,9 +1,13 @@
 <template>
-    <header>
-      <h1>{{ title }}</h1>
-    <img class="header-photo-1" src=./assets/teepee.svg alt="cartoon of teepee home sweet home">
+   <header>
+     <h1> {{ title }} </h1>
      <h1 class="page-title">Find your destination!</h1>
-    <img class="header-photo-2" src=./assets/CannonBeachOregon.jpg alt="Cannon Beach Oregon">
+     <div class="allPhotos">
+       <img class="header-photo-1" src=./assets/mt-baker-Washington.jpg alt="Mt Rainier in Washington">
+       <img class="header-photo-2" src=./assets/CannonBeachOregon.jpg alt="Cannon Beach Oregon">
+       <img class="header-photo-3" src=./assets/westport-crab-pots.jpg alt="Crab pots in Westport
+       Washington">
+     </div>
 
     </header>
 
@@ -15,8 +19,6 @@
       <nav><router-link to="/UploadPhotos">Upload Photos</router-link></nav>
     </div>
     <router-view />
-
-
 
   <footer>
     <div>
@@ -43,6 +45,17 @@ export default {
 </script>
 
 <style lang="scss">
+
+// Web site created for Galaxy S5 
+// Need more time to figure out Media Queries
+// Common Font Sizes
+$font-verdana: Verdana, Geneva, Tahoma, sans-serif;
+$font-tahoma: Tahoma, sans-serif;
+$font-small: 0.6rem;
+$font-medium: 1rem;
+$font-large: 1.5rem;
+$font-veryLarge: 2rem;
+
 //Global CSS for webpage
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -51,14 +64,29 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+* {
+  box-sizing: border-box;
+}
+.globalElements {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #e0ffff;
+}
+.header {
+  display: flex;
+  flex-flow: column wrap;
+}
 .header-photo-1 {
-  display: none;
+  width: 70%;
 }
 .header-photo-2 {
-  height: 15rem;
+  display: none;
 }
-.nav {
+.header-photo-3 {
+  display: none;
+}
+.footer {
   display: flex;
-  flex-wrap: row wrap;
+  flex-flow: column wrap;
 }
 </style>
