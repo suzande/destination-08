@@ -35,4 +35,7 @@
   .h1 {
     font-size: 1rem;
   }
+  li {
+    list-style: none;
+  }
 </style>
