@@ -12,7 +12,7 @@
     </header>
 
     <div id="nav">
-      <nav><router-link to="/Home">Home</router-link></nav>
+      <nav><router-link to="/">Home</router-link></nav>
       <nav><router-link to="/Destinations">Destinations</router-link></nav>
       <nav><router-link to="/CulturalEvents">Cultural Events</router-link></nav>
       <nav><router-link to="/WaterSports">Water Sports</router-link></nav>
@@ -49,12 +49,7 @@ export default {
 // Web site created for Galaxy S5 
 // Need more time to figure out Media Queries
 // Common Font Sizes
-$font-verdana: Verdana, Geneva, Tahoma, sans-serif;
-$font-tahoma: Tahoma, sans-serif;
-$font-small: 0.6rem;
-$font-medium: 1rem;
-$font-large: 1.5rem;
-$font-veryLarge: 2rem;
+
 
 //Global CSS for webpage
 #app {
@@ -63,6 +58,12 @@ $font-veryLarge: 2rem;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  $font-verdana: Verdana, Geneva, Tahoma, sans-serif;
+  $font-tahoma: Tahoma, sans-serif;
+  $font-small: 0.6rem;
+  $font-medium: 1rem;
+  $font-large: 1.5rem;
+  $font-veryLarge: 2rem;
 }
 * {
   box-sizing: border-box;
@@ -77,7 +78,7 @@ $font-veryLarge: 2rem;
   flex-flow: column wrap;
 }
 .header-photo-1 {
-  width: 70%;
+  width: 80%;
 }
 .header-photo-2 {
   display: none;
