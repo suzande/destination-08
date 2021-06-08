@@ -2,8 +2,15 @@
   <h1>{{ title }}</h1>
   <!--<img class="photo-home" src="../assets/westport-crab-pots.jpg" />-->
   <div class="home-photo">
-    <img class="photoView-1" v-bind:src="imagesWa[imageIndex].src" v-bind:alt="imagesWa[imageIndex].alt">
-    <button class="next-1" @click="addOneWa">Next Photo</button>
+    <img src=../assets/CanoeJourney.jpg alt="Canoe Journey Alki Beach">
+    <img src=../assets/haystack-rock-NeahBay.jpg alt="Haystack Rock in the Pacific Ocean, Neah Bay, WA">
+    <img src=../assets/mt-baker-Washington.jpg alt="Mount Baker east of Bellingham, Washington">
+    <img src=../assets/MtRainier.jpg alt="Mount Raineir east of Seattle, Washington">
+    <img src=../assets/westport-crab-pots.jpg alt="Westport on the Washington Coast">
+    <img src=../assets/Dawn_dancing_2.jpg alt= "University of Washington Spring Pow-wow">
+    <img src=../assets/BlueMountains-WallaWalla.jpg alt="Blue Mountain Range in Walla Walla, WA"> 
+    <img :src="getImagePath(list[0]).imgSrc" alt="Mt Rainier in Washington">
+  
     <ul>
       <li v-for="waLocation in waLocations" :key="waLocation.text">
         {{ waLocation.text }}
@@ -18,7 +25,6 @@ export default {
   data() {
     return {
       title: "Locations in Washington to Visit",
-      imageIndex: 0,
       waLocations: [
         { text: "Canadian Border" },
         { text: "Washington Coast" },
@@ -26,51 +32,17 @@ export default {
         { text: "Mount Rainier" },
         { text: "Pow-wow Time" },
       ],
-      imagesWa: [
-        {
-          id: 1,
-          src: "../assets/CanoeJourney.jpg",
-          alt: "Canoe Journey Alki Beach",
-        },
-        {
-          id: 2,
-          src: "../assets/haystack-rock-NeahBay.jpg",
-          alt: "Haystack Rock in the Pacific Ocean, Neah Bay, WA",
-        },
-        {
-          id: 3,
-          src: "../assets/mt-baker-Washington.jpg",
-          alt: "Mount Baker east of Bellingham, Washington",
-        },
-        {
-          id: 4,
-          src: "../assets/MtRainier.jpg",
-          alt: "Mount Raineir east of Seattle, Washington",
-        },
-        {
-          id: 5,
-          src: "../assets/westport-crab-pots.jpg",
-          alt: "Westport on the Washington Coast",
-        },
-        {
-          id: 6,
-          src: "../assets/Dawn_dancing_2.jpg",
-          alt: "University of Washington Spring Pow-wow",
-        },
-        {
-          id: 7,
-          src: "../assets/BlueMountains-WallaWalla.jpg",
-          alt: "Blue Mountain Range in Walla Walla, WA",
-        },
+      list: [
+      {imgSrc: "@/assets/mt-baker-Washington.jpg"}
       ],
+    };
+  },
   methods: {
-    addOneWa() {
-      this.imageIndex = (this.imageIndex + 1) % this.imagesWa.length;
-    },
+    getImagePath(path) {
+      return(require(path))
+     }
    }
-  }
- }
-}
+ };
 </script>
 
 <style lang="scss">
