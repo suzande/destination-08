@@ -3,10 +3,7 @@
      <h1> {{ title }} </h1>
      <h1 class="page-title">Find your destination!</h1>
      <div class="allPhotos">
-       <img class="header-photo-1" src=./assets/mt-baker-Washington.jpg alt="Mt Rainier in Washington">
-       <img class="header-photo-2" src=./assets/CannonBeachOregon.jpg alt="Cannon Beach Oregon">
-       <img class="header-photo-3" src=./assets/westport-crab-pots.jpg alt="Crab pots in Westport
-       Washington">
+       <img class="header-photo-1" v-bind:src="list[0].imgSrc" alt="Mt Rainier in Washington">
      </div>
 
     </header>
@@ -39,6 +36,9 @@ export default {
     return {
       title: "Welcome to the Destination Site",
       footerText: "Visit Tourist Locations in Washington/Oregon!",
+      list: [
+        {imgSrc: "./assets/mt-baker-Washington.jpg"}
+      ],
     };
   }
 };
