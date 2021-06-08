@@ -8,6 +8,25 @@
 
     </header>
 
+    <div id="nav">
+      <nav><router-link to="/">Home</router-link></nav>
+      <nav><router-link to="/Destinations">Destinations</router-link></nav>
+      <nav><router-link to="/CulturalEvents">Cultural Events</router-link></nav>
+      <nav><router-link to="/WaterSports">Water Sports</router-link></nav>
+      <nav><router-link to="/UploadPhotos">Upload Photos</router-link></nav>
+    </div>
+    <router-view />
+
+  <footer>
+    <div>
+     <h2>Visit Tourist Locations in Washington/Oregon!</h2>
+     <p>HTMl 130B Sp 21: JavaScript</p>
+     <p>4311 11th Ave NE, Seattle, WA 98105</p>
+     <p>Hours of operation</p>
+     <p>Friday, 9:00p.m. to 5:00p.m.</p>
+     <p>Send a note if requesting information.</p>
+   </div>
+  </footer>
 </template>
 
 <script>
@@ -15,8 +34,10 @@ export default {
   name: "App",
   data() {
     return {
+      title: "Welcome to the Destination Site",
+      footerText: "Visit Tourist Locations in Washington/Oregon!",
       list: [
-      {imgSrc: "@/assets/mt-baker-Washington.jpg"}
+        {imgSrc: "@/assets/mt-baker-Washington.jpg"}
       ],
     };
   },
