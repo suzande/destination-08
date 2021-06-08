@@ -3,7 +3,7 @@
      <h1> {{ title }} </h1>
      <h1 class="page-title">Find your destination!</h1>
      <div class="allPhotos">
-       <img class="header-photo-1" :src="getImagePath(list[0]).imgSrc" alt="Mt Rainier in Washington">
+       <img class="header-photo-1" v-bind:src="list[0].imgSrc" alt="Mt Rainier in Washington">
      </div>
 
     </header>
@@ -37,14 +37,9 @@ export default {
       title: "Welcome to the Destination Site",
       footerText: "Visit Tourist Locations in Washington/Oregon!",
       list: [
-        {imgSrc: "@/assets/mt-baker-Washington.jpg"}
+        {imgSrc: "./assets/mt-baker-Washington.jpg"}
       ],
     };
-  },
-  methods: {
-    getImagePath(path){
-      return(require(path))
-    }
   }
 };
 </script>
