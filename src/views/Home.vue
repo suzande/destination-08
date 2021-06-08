@@ -2,7 +2,7 @@
   <h1>{{ title }}</h1>
   <!--<img class="photo-home" src="../assets/westport-crab-pots.jpg" />-->
   <div class="home-photo">
-    <img class="photoView-1" v-bind:src='../assets/imagesWa[imageIndex].src" v-bind:alt="imagesWa[imageIndex].alt">
+    <img class="photoView-1" v-bind:src="imagesWa[imageIndex].src" v-bind:alt="imagesWa[imageIndex].alt">
     <button class="next-1" @click="addOneWa">Next Photo</button>
     <ul>
       <li v-for="waLocation in waLocations" :key="waLocation.text">
@@ -63,12 +63,13 @@ export default {
           alt: "Blue Mountain Range in Walla Walla, WA",
         },
       ],
-    };
   methods: {
     addOneWa() {
       this.imageIndex = (this.imageIndex + 1) % this.imagesWa.length;
     },
+   }
   }
+ }
 }
 </script>
 
