@@ -1,12 +1,20 @@
 <template>
   <h1>Cultural Events</h1>
   <div>
-    <img class="photoView-1" src="imagesWa.src" alt="imagesWa.alt" />
+    <img class="photoView-1" src="waPhotos.src" alt="waPhotos.alt" />
     <button class="next-1" @click="addOneWa">Next Photo</button>
   </div>
 </template>
 
 <script>
+const waPhotos = [
+  {
+    id: "1",
+    text: "Canoe Journey of Tribes",
+    src: "..assets/CanoeJourney.jpg",
+    alt: "Canoe Journey Alki Beach",
+  },
+];
 export default {
   name: "Washington Events",
   data() {
@@ -54,7 +62,8 @@ export default {
   },
   methods: {
     addOneWa() {
-      this.imageIndex = (this.imageIndex + 1) % this.imagesWa.length;
+      index = 0;
+      for (waPhotos = 0; i < waPhotos.length; waPhotos++);
     },
   },
 };
