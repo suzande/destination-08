@@ -1,6 +1,8 @@
 <template>
   <h1> {{ title }} </h1>
   <div>
+    <!--TODO: Add function to take getData function and pass result
+        into new http fetch command.  I just didn' have time to do that. -->
     <img
       class="photoPic"
       @click="getData"
@@ -56,7 +58,7 @@
 export default {
   name: "Washington Events",
   props: {
-      siteName: {
+    siteName: {
       type: String,
       required: true,
     },
@@ -74,15 +76,17 @@ export default {
     return {
       title: "Destinations in Washington",
       list: "",
-      siteName: "Destination Site",
-      where: "Where would you like to go?",
       author: "Who's site: Suzanne DePoe",
-      rating: "Site Rates a 10"
+      rating: "Site Rates a 10",
+      siteName: "Destination Site",
+      where: "Where would you like to go?"
+      
     };
   },
-  //let weather = "http://api.openweathermap.org/data/2.5/weather?q=city&units=imperial&appid=bd2463aff7191ada5d8eed8d6ac5910d";
-//CorrectCity = weather.replace("city", "Seattle");
-//console.log(CorrectCity);
+  // TODO: create function first of getData to take input and replace city.
+  //let weather = "http://api.openweathermap.org/data/2.5/weather?q=city&units=imperial&//appid=bd2463aff7191ada5d8eed8d6ac5910d";
+  //CorrectCity = weather.replace("city", "Seattle");
+  //console.log(CorrectCity);
   methods: {
     getData() {
       // Current Weather Open Weather was used: https://openweathermap.org/current
