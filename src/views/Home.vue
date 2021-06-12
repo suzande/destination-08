@@ -1,6 +1,6 @@
 <template>
  <h1>{{ title }}</h1>
- <!--<img class="photo-home" src="../assets/westport-crab-pots.jpg" />-->
+ <!--<img class="photo-home" src="./images/westport-crab-pots.jpg" />-->
  <div class="home-photo">
    <ul>
      <li v-for="waLocation in waLocations" :key="waLocation.text">

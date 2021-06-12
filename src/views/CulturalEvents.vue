@@ -11,7 +11,7 @@ const waPhotos = [
   {
     id: "1",
     text: "Canoe Journey of Tribes",
-    src: "..assets/CanoeJourney.jpg",
+    src: "./images/CanoeJourney.jpg",
     alt: "Canoe Journey Alki Beach",
   },
 ];
@@ -24,37 +24,38 @@ export default {
       imagesWa: [
         {
           id: 1,
-          src: "..assets/CanoeJourney.jpg",
+          src: "./images/CanoeJourney.jpg",
           alt: "Canoe Journey Alki Beach",
         },
+        // use the ./images/ for photos, placed in public folder.
         {
           id: 2,
-          src: "..assets/haystack-rock-NeahBay.jpg",
+          src: "./images/haystack-rock-NeahBay.jpg",
           alt: "Haystack Rock in the Pacific Ocean, Neah Bay, WA",
         },
         {
           id: 3,
-          src: "..assets/mt-baker-Washington.jpg",
+          src: "./images/mt-baker-Washington.jpg",
           alt: "Mount Baker east of Bellingham, Washington",
         },
         {
           id: 4,
-          src: "..assets/MtRainier.jpg",
+          src: "./images/MtRainier.jpg",
           alt: "Mount Raineir east of Seattle, Washington",
         },
         {
           id: 5,
-          src: "..assets/westport-crab-pots.jpg",
+          src: "./images/westport-crab-pots.jpg",
           alt: "Westport on the Washington Coast",
         },
         {
           id: 6,
-          src: "..assets/Dawn_dancing_2.jpg",
+          src: "./images/Dawn_dancing_2.jpg",
           alt: "University of Washington Spring Pow-wow",
         },
         {
           id: 7,
-          src: "..assets/BlueMountains-WallaWalla.jpg",
+          src: "./images/BlueMountains-WallaWalla.jpg",
           alt: "Blue Mountain Range in Walla Walla, WA",
         },
       ],

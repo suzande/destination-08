@@ -83,6 +83,7 @@ export default {
       
     };
   },
+  // TODO: Use v-model to do this function
   // TODO: create function first of getData to take input and replace city.
   //let weather = "http://api.openweathermap.org/data/2.5/weather?q=city&units=imperial&//appid=bd2463aff7191ada5d8eed8d6ac5910d";
   //CorrectCity = weather.replace("city", "Seattle");
