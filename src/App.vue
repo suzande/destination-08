@@ -2,20 +2,31 @@
   <header>
     <h1 class="page-title">Find your destination!</h1>
     <div class="allPhotos">
-      <img class="header-photo-1" src=./assets/mt-baker-Washington.jpg alt="Mt
-      Rainier in Washington"> <img class="header-photo-2"
-      src=./assets/CannonBeachOregon.jpg alt="Cannon Beach Oregon"> <img
-      class="header-photo-3" src=./assets/westport-crab-pots.jpg alt="Crab pots
-      in Westport Washington">
+      <img
+        class="header-photo-1"
+        src="./assets/mt-baker-Washington.jpg"
+        alt="Mt
+      Rainier in Washington"
+      />
+      <img
+        class="header-photo-2"
+        src="./assets/CannonBeachOregon.jpg"
+        alt="Cannon Beach Oregon"
+      />
+      <img
+        class="header-photo-3"
+        src="./assets/westport-crab-pots.jpg"
+        alt="Crab pots
+      in Westport Washington"
+      />
     </div>
   </header>
 
   <div id="nav">
     <nav><router-link to="/">Home</router-link></nav>
     <nav><router-link to="/Destinations">Destinations</router-link></nav>
-    <nav><router-link to="/CulturalEvents">Cultural Events</router-link></nav>
-    <nav><router-link to="/WaterSports">Water Sports</router-link></nav>
-    <nav><router-link to="/UploadPhotos">Upload Photos</router-link></nav>
+    <nav><router-link to="/CultureWashington">CultureWashington</router-link></nav>
+    <nav><router-link to="/CultureOregon">CultureOregon</router-link></nav>
   </div>
   <router-view />
 
@@ -86,5 +97,10 @@ export default {
 .footer {
   display: flex;
   flex-flow: column wrap;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  * {
+    background-color: #f00;
+  }
 }
 </style>

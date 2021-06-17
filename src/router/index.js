@@ -1,9 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Destinations from '../views/Destinations.vue';
-import CulturalEvents from '../views/CulturalEvents.vue';
-import WaterSports from '../views/WaterSports.vue';
-import UploadPhotos from '../views/UploadPhotos.vue'
+import CulturalEvents from '../views/CultureWashington.vue';
+import CultureOregon from '../views/CultureOregon.vue';
 
 
 const routes = [
@@ -13,9 +12,9 @@ const routes = [
     component: Home,
   },
   {
-    path: '/WaterSports',
-    name: 'WaterSports',
-    component: WaterSports,
+    path: '/CultureOregon',
+    name: 'CultureOregon',
+    component: CultureOregon,
   },
   {
     path: '/Destinations',
@@ -23,15 +22,10 @@ const routes = [
     component: Destinations,
   },
   {
-    path: '/CulturalEvents',
-    name: 'CulturalEvents',
+    path: '/CultureWashington',
+    name: 'CultureWashington',
     component: CulturalEvents,
   },
-  {
-    path: '/UploadPhotos',
-    name: 'UploadPhotos',
-    component: UploadPhotos
-  }
 ]
 
 const router = createRouter({
