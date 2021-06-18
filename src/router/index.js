@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Destinations from '../views/Destinations.vue';
-import CulturalEvents from '../views/CultureWashington.vue';
+import CultureWashington from '../views/CultureWashington.vue';
 import CultureOregon from '../views/CultureOregon.vue';
-
+import Photos from '../views/Photos.vue';
 
 const routes = [
   {
@@ -24,7 +24,12 @@ const routes = [
   {
     path: '/CultureWashington',
     name: 'CultureWashington',
-    component: CulturalEvents,
+    component: CultureWashington,
+  },
+  {
+    path: '/Photos',
+    name: 'Photos',
+    component: Photos,
   },
 ]
 

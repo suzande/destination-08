@@ -22,17 +22,18 @@
     </div>
   </header>
 
-  <div id="nav">
+  <div id="nav" class="nav-menu">
     <nav><router-link to="/">Home</router-link></nav>
     <nav><router-link to="/Destinations">Destinations</router-link></nav>
     <nav><router-link to="/CultureWashington">CultureWashington</router-link></nav>
     <nav><router-link to="/CultureOregon">CultureOregon</router-link></nav>
+    <nav><router-link to="/Photos">Photos</router-link></nav>
   </div>
   <router-view />
 
   <footer>
     <div>
-      <h2>Visit Tourist Locations in Washington/Oregon!</h2>
+      <h3 class="bottom-pad">Visit Tourist Locations in Washington and in Oregon!</h3>
       <p>HTMl 130B Sp 21: JavaScript</p>
       <p>4311 11th Ave NE, Seattle, WA 98105</p>
       <p>Hours of operation</p>
@@ -94,13 +95,43 @@ export default {
 .header-photo-3 {
   display: none;
 }
+.bottom-pad {
+  padding-top: 2rem;
+}
 .footer {
   display: flex;
   flex-flow: column wrap;
 }
-@media (min-width: 768px) and (max-width: 979px) {
-  * {
-    background-color: #f00;
+@media (min-width: 1025px) and (max-width: 1201px) {
+  .nav-menu {
+    font-size: 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 1rem;
+    justify-content: space-around;
+    color: #000000;
+    text-decoration: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-around;
+  }
+  .allPhotos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .header-photo-1 {
+    display: flex;
+    width: 30%;
+  }
+  .header-photo-2 {
+    display: flex;
+    width: 30%;
+  }
+  .header-photo-3 {
+    display: flex;
+    width: 30%;
   }
 }
 </style>

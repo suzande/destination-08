@@ -1,38 +1,30 @@
 <template>
-  <h1>Culture in Washington</h1>
-  <h2>Coastal Locations in Washington</h2>
-  <div>
-  <!-- <img class="photoView-2" v-bind:src="imagesOr[imageIndex].src" v-bind:alt="imagesOr[imageIndex].alt">
+  <h1>Great Destinations in Washington</h1>
+  <div class="wa-wrapper">
+    <!-- <img class="photoView-2" v-bind:src="imagesOr[imageIndex].src" v-bind:alt="imagesOr[imageIndex].alt">
     <button class="next-1" @click="addOneWa">Next Photo</button>-->
-  <img class="photo-wa" src="../assets/SmithTower.jpeg" alt="Smith Tower Downtown Seattle"/>
-  <p>Smith Tower Downtown Seattle</p>
-  <img class="photo-wa" src="../assets/Ferry.jpg" alt="Seattle Ferries see the Sound"/>
-  <p>Seattle Ferries see the Sound</p>
-  <img class="photo-wa" src="../assets/snoqualmiePass.jpg" 
-      alt="Snoqualmie Pass 3600ft"/>
-  <p>Snoqualmie Pass 3600ft</p>
-  <img class="photo-wa" src="../assets/SalmonBakeNeahBay.jpg" 
-      alt="Salmon Bake Neah Bay Washington, Makah Nation"/>
-  <p>Salmon Bake Neah Bay Washington<br>Makah Nation</p>
-  <img class="photo-wa" src="../assets/CanoeRaces.jpeg" 
-      alt="Makah Days Canoe Races"/>
-  <p>Makah Days Canoe Races</p>
-  <img class="photo-wa" src="../assets/BeautifulSeattle.jpeg" 
+
+    <img class="photo-wa" src="../assets/BeautifulSeattle.jpeg" 
       alt="Beautiful Seattle, Washington"/>
-  <p>Beautiful Seattle, Washington</p>
+    <p class="words">Beautiful Seattle, Washington</p>
+    <img class="photo-wa" src="../assets/SmithTower.jpeg" alt="Smith Tower Downtown Seattle"/>
+    <p class="words">Smith Tower Downtown Seattle</p>
+    <img class="photo-wa" src="../assets/Ferry.jpg" alt="Seattle Ferries see the Sound"/>
+    <p class="words">Seattle Ferries see the Sound</p>
+    <img class="photo-wa" src="../assets/snoqualmiePass.jpg" 
+      alt="Snoqualmie Pass 3600ft"/>
+    <p class="words">Snoqualmie Pass 3600ft</p>
+    <img class="photo-wa" src="../assets/SalmonBakeNeahBay.jpg" 
+      alt="Salmon Bake Neah Bay Washington, Makah Nation"/>
+    <p class="words">Salmon Bake Neah Bay Washington<br>Makah Nation</p>
+    <img class="photo-wa" src="../assets/CanoeRaces.jpeg" 
+      alt="Makah Days Canoe Races"/>
+    <p class="words">Makah Days Canoe Races</p>
   </div>
 
 </template>
 
 <script>
-const waPhotos = [
-  {
-    id: "1",
-    text: "Canoe Journey of Tribes",
-    src: "../assets/CanoeJourney.jpg",
-    alt: "Canoe Journey Alki Beach",
-  },
-];
 export default {
   name: "Washington Events",
   data() {
@@ -87,13 +79,34 @@ export default {
 </script>
 <style scoped>
 .photo-wa {
+  width: 85%;
   display: flex;
   flex-flow: column wrap;
-  width: 100%;
+  padding-left: 15%;
+  padding-top: 1rem;
 }
-@media (min-width: 768px) and (max-width: 979px) {
-  * {
-    background-color: #f00;
+.words {
+  padding-top: 1rem;
+}
+@media (min-width: 1025px) and (max-width: 1201px) {
+  .photo-wa {
+    width: 50%;
   }
+  .wa-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-right: 0;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
 }
 </style>

@@ -14,10 +14,10 @@
     {{ list }}
     <p class="spaceNeedle-2">Select picture above for Seattle Temp</p>
     <div class="site">
-      <h2 :siteName="siteName">{{ siteName }}</h2>
-      <h3 :where="where">{{ where }}</h3>
-      <h3 :author="author">{{ author }}</h3>
-      <p :rating="rating">{{ rating }}</p>
+      <h2 class="propsList" :siteName="siteName">{{ siteName }}</h2>
+      <h3 class="propsList" :where="where">{{ where }}</h3>
+      <h3 class="propsList" :author="author">{{ author }}</h3>
+      <p class="propsList" :rating="rating">{{ rating }}</p>
     </div>
 
     <h1>Share your Stories</h1>
@@ -38,25 +38,10 @@
           placeholder="email"
         />
         <span class="space"></span>
-        <input class="enterCity" type="submit" value="submit" name="submit" />
+        <input class="nameInput" type="submit" value="Submit" name="submit" />
       </form>
     </div>
-    <div class="weather">
-      <label class="cityTemp-1" id="cityTemp"
-        >Enter City to see weather today:</label >
-    </div>
-    <div class="inputField">
-      <input
-        class="cityRequested"
-        type="text"
-        name="City"
-        placeholder="City"
-      /><!--Input for City Naame-->
-      </div>
-      <div class="city-width">
-       <input class="enterCity" type="submit" value="submit" name="submit" />
-      </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -132,7 +117,6 @@ export default {
   background-color: #dcdcdc;
   width: 50%;
 }
-
 .form {
   display: flex;
   flex-flow: column wrap;
@@ -159,7 +143,6 @@ h3 {
   padding-left: 3rem;
   margin: 0;
   width: 80%;
-
 }
 .weather {
   display: flex;
@@ -175,28 +158,15 @@ h3 {
 }
 .spaceNeedle-2 {
   padding-top: 1rem;
+  padding-bottom: 1rem;
   margin: 0;
-  font-weight: bold; 
+  font-weight: bold;
 }
 .site {
   font-size: 1rem;
   font-weight: normal;
   margin: 0;
   padding: 0;
-}
-.enterCity {
-  width: 40%;
-}
-.cityWhere {
-  display: flex;
-  width: 75%;
-  flex-flow: column wrap;
-  align-items: center;
-}
-.cityRequested {
-  width: 100%;
-  margin: .5rem;
-  align-items: center;
 }
 .space {
   padding-bottom: 1rem;
@@ -205,18 +175,61 @@ h3 {
   width: 80%;
   height: 50%;
 }
-.nameField {
-  text-align: left;
-}
-.emailField {
-  text-align: left;
-}
-.cityTemp-1 {
-  padding-left: 2rem;
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  * {
-    background-color: #f00;
+@media (min-width: 1025px) and (max-width: 1201px) {
+  .wrapper input[type="submit"] {
+    font-size: 1rem;
+    color: #000000;
+    background-color: #dcdcdc;
+    width: 25%;
+    height: 2rem;
+  }
+  .photoPic {
+    width: 60%;
+  }
+  .spaceNeedle-1 {
+    padding-top: 0.5rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+  .spaceNeedle-2 {
+    padding-top: 1rem;
+    margin: 0;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .site {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+  .propsList {
+    font-size: 1.5rem;
+  }
+  .label-fix {
+    color: #000000;
+    display: inline;
+    align-items: flex-start;
+  }
+  .inputName {
+    height: 2rem;
+    width: 75%;
+  }
+  .inputEmail {
+    height: 2rem;
+    width: 75%;
+  }
+  .inputField {
+    padding-left: 14rem;
+    margin: 0;
+    width: 80%;
+  }
+  .nameInput {
+    width: 100%;
+  }
+  .cityRequested {
+    margin: 0.5rem;
+    align-items: center;
   }
 }
 </style>
